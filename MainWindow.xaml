@@ -1,0 +1,142 @@
+﻿<!-- Dominic Langowski
+            2/19/2020
+            Computer Program PC Project-->
+<Window x:Class="Computer_Science_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Computer_Science_Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+        <StackPanel>
+            <Label x:Name="lblTitle" Content="Computer PC Parts/ Google Pixel Part" FontSize="16"/>
+            <Label></Label>
+            <Button x:Name = "btnComputer_Parts" Click="BtnComputer_Parts_Click">Click Here</Button>
+            <Label></Label>
+            <Label></Label>
+            <Label x:Name="lblTotal" Content="Total Price" FontSize="16"/>
+            <Button x:Name="btnTOtal" Content="Calculate" Click="BtnTOtal_Click"/>
+            <Label x:Name="lblBeforeTax" Visibility="Collapsed">Total</Label>
+            <Label x:Name="lblTotalPrice" Content="" Visibility="Collapsed" Background="DarkOliveGreen" Width="609" Height="42"></Label>
+            <Label x:Name="lblAfterTax" Content="Total with Tax" Visibility="Collapsed"/>
+            <Label x:Name="lblTotalTax" Content="" Background="LightGreen" Visibility="Collapsed"></Label>
+            <Label></Label>
+            <Label></Label>
+            
+
+            <!-- FOR THE CPU-->
+            <CheckBox x:Name="chkCPU" Content="CPU" Visibility="Collapsed" Checked="ChkCPU_Checked" Unchecked="ChkCPU_Unchecked"/>
+            <Label x:Name="lblCPU" Visibility="Collapsed">Intel Core i3-9100F</Label>
+            <Label x:Name="lblURLCPU" Visibility="Collapsed" Content="https://www.newegg.ca/intel-core-i3-9th-gen-core-i3-9100f/p/N82E16819118072"/>
+            <Image x:Name="imgCPU" Visibility="Collapsed" Source="https://c1.neweggimages.com/ProductImage/19-118-072-V01.jpg" Height="161" Width="354" />
+            <TextBox x:Name="txtCPUshipping" Visibility="Collapsed" Text="Shipping: $4.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.196"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="txtCPUPrice" Visibility="Collapsed" Text="Price: $109.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- FOR THE CPU-->
+
+            <!-- FOR THE CPU COOLER-->
+            <CheckBox x:Name="chkCpuCooler" Visibility="Collapsed" Content="Cpu Cooler" Checked="ChkCpuCooler_Checked" Unchecked="ChkCpuCooler_Unchecked"/>
+            <Label x:Name="lblCpuCooler" Visibility="Collapsed">DEEPCOOL GAMMAXX 400 CPU Air Cooler</Label>
+            <Label x:Name="lblCpuCoolerURL" Visibility="Collapsed" Content="https://www.newegg.ca/deepcool-gammaxx-400/p/N82E16835856005"/>
+            <Image x:Name="imgCpuCooler" Visibility="Collapsed" Source="https://c1.neweggimages.com/NeweggImage/ProductImage/35-856-005-V01.jpg" Height="277" Width="524"/>
+            <TextBox x:Name="txtCPUCoolershipping" Visibility="Collapsed" Text="Shipping: $7.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtCpuCoolerPrice" Visibility="Collapsed" Text="Price: $23.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- FOR THE CPU COOLER-->
+
+            <!-- FOR THE MOTHERBOARD -->
+            <CheckBox x:Name="chkMotherBoard" Content="MotherBoard" Visibility="Collapsed" Checked="ChkMotherBoard_Checked" Unchecked="ChkMotherBoard_Unchecked"/>
+            <Label x:Name="lblMotherBoard" Visibility="Collapsed">GIGABYTE B365M DS3H LGA 1151 (300 Series)</Label>
+            <Label x:Name="lblURLMotherBoard" Visibility="Collapsed">https://www.newegg.ca/p/N82E16813145169</Label>
+            <Image x:Name="imgMotherBoard"  Visibility="Collapsed" Source="https://images-na.ssl-images-amazon.com/images/I/71vYAi%2B1ywL._AC_SY355_.jpg" Height="277" Width="524" />
+            <TextBox x:Name="txtMotherBoardshipping" Visibility="Collapsed" Text="Shipping: $5.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtMotherBoardPrice" Visibility="Collapsed" Text="Price: $109.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- FOR THE MOTHERBOARD-->
+
+            <!-- FOR THE RAM-->
+            <CheckBox x:Name="chkRam" Content="RAM" Visibility="Collapsed" Checked="ChkRam_Checked" Unchecked="ChkRam_Unchecked"/>
+            <Label x:Name="lblRam" Visibility="Collapsed">G.SKILL Aegis 16GB (2 x 8GB) 288-Pin DDR4</Label>
+            <Label x:Name="lblURLRam" Visibility="Collapsed">https://www.newegg.ca/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232417</Label>
+            <Image x:Name="imgRam"  Visibility="Collapsed" Source="https://c1.neweggimages.com/ProductImage/AG7R_132025354375886156YmYwoVYTnr.jpg" Height="277" Width="524"/>
+            <TextBox x:Name="txtRAMshipping" Visibility="Collapsed" Text="Shipping: $7.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtRamPrice" Visibility="Collapsed" Text="Price: $95.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- FOR THE RAM-->
+
+            <!-- For the Graphics Card-->
+            <CheckBox x:Name="chkGraphicsCard" Content="GPU - Graphics Card -" Visibility="Collapsed" Checked="ChkGraphicsCard_Checked" Unchecked="ChkGraphicsCard_Unchecked"/>
+            <Label x:Name="lblGraphicsCard" Visibility="Collapsed">ASRock Phantom Gaming X Radeon RX 580</Label>
+            <Label x:Name="lblURLGraphicsCard" Visibility="Collapsed">ttps://www.newegg.ca/asrock-radeon-rx-580-rx580-8g-oc/p/N82E16814930002?Item=N82E16814930002</Label>
+            <Image x:Name="imgGraphicsCard"  Visibility="Collapsed" Source="https://images.tweaktown.com/content/8/6/8607_08_asrock-radeon-rx-580-phantom-gaming-world-first-look.jpg" Height="277" Width="524"/>
+            <TextBox x:Name="txtGraphicshipping" Visibility="Collapsed" Text="Shipping: $7.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtGraphicsCardPrice" Visibility="Collapsed" Text="Price: $199.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- For the Graphics Card-->
+
+            <!-- For the Hard Drive-->
+            <CheckBox x:Name="chkHardDrive" Content="Hard Drive" Visibility="Collapsed" Checked="ChkHardDrive_Checked" Unchecked="ChkHardDrive_Unchecked"/>
+            <Label x:Name="lblHardDrive" Visibility="Collapsed">SAMSUNG 860 EVO Series 2.5" 500GB</Label>
+            <Label x:Name="lblURLHardDrive" Visibility="Collapsed">https://www.newegg.ca/samsung-860-evo-series-500gb/p/N82E16820147674</Label>
+            <Image x:Name="imgHardDrive" Visibility="Collapsed" Source="https://images-na.ssl-images-amazon.com/images/I/814poe%2BIDsL._AC_SL1500_.jpg" Height="277" Width="524"/>
+            <TextBox x:Name="txtHardDriveshipping" Visibility="Collapsed" Text="Shipping: $5.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtHardDrivePrice" Visibility="Collapsed" Text="Price: $89.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- For the Hard Drive-->
+
+            <!-- For the Power Supply-->
+            <CheckBox x:Name="chkPowerSupply" Content="Power Supply" Visibility="Collapsed" Checked="ChkHardDrive_Checked_1" Unchecked="ChkHardDrive_Unchecked_1"/>
+            <Label x:Name="lblPowerSupply" Visibility="Collapsed">CORSAIR CX Series CX650 650W ATX12V 80</Label>
+            <Label x:Name="lblURLPowerSupply" Visibility="Collapsed">https://www.newegg.ca/corsair-cx-series-cx650-650w/p/N82E16817139200</Label>
+            <Image x:Name="imgPowerSupply" Visibility="Collapsed" Source="https://i.ebayimg.com/images/g/ikgAAOSwWmpc48Zy/s-l640.jpg" Height="640" Width="480"/>
+            <TextBox x:Name="txtPowerSupplyshipping" Visibility="Collapsed" Text="Shipping: $5.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtPowerSupplyPrice" Visibility="Collapsed" Text="Price: $89.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- For the Power Supply-->
+
+            <!-- For the Computer Case-->
+            <CheckBox x:Name="chkComputerCase" Content="Computer Case" Visibility="Collapsed" Checked="ChkComputerCase_Checked" Unchecked="ChkComputerCase_Unchecked"/>
+            <Label x:Name="lblComputerCase" Visibility="Collapsed">DIYPC Alnitak-BK Black USB 3.0 ATX, Micro-ATX Mid Tower</Label>
+            <Label x:Name="lblURLComputerCase" Visibility="Collapsed">https://www.newegg.ca/p/N82E16811353081</Label>
+            <Image x:Name="imgComputerCase" Visibility="Collapsed" Source="https://c1.neweggimages.com/NeweggImage/ProductImage/11-353-081-01.jpg" Height="640" Width="480"/>
+            <TextBox x:Name="txtComputerCaseshipping" Visibility="Collapsed" Text="Shipping: $9.99" Background="LightBlue" FontSize="14" Width="548" Height="23" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtComputerCasePrice" Visibility="Collapsed" Text="Price: $44.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- For the Computer Case-->
+
+            <Label></Label>
+            <!-- Windows Operating System-->
+            <Label x:Name="lblOperatingSystems" Visibility="Collapsed" FontSize="14">Operating Systems</Label>
+            <CheckBox x:Name="chkWindows10" Content="Windows 10 64 bit" Visibility="Collapsed" Checked="ChkWindows10_Checked" Unchecked="ChkWindows10_Unchecked"/>
+            <TextBox x:Name="lblURLWindows10" Visibility="Collapsed">Amazon.ca - Windows 10 Home 64 Bit with Bestseller Tag</TextBox>
+            <TextBox x:Name="txtWindoes10Price" Visibility="Collapsed" Text="Price: $119.00" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- Windows Operating System-->
+
+            <!-- Ubuntu Operating System-->
+            <CheckBox x:Name="chkLinux" Content="Linux Ubuntu" Visibility="Collapsed" Checked="ChkLinux_Checked" Unchecked="ChkLinux_Unchecked"/>
+            <Label x:Name="lblURLLinux" Visibility="Collapsed">https://ubuntu.com/</Label>
+            <Label x:Name="lblWindowsEmulator" Visibility="Collapsed">You can download WineHQ to emulate windows if you are using a windows based Cad</Label>
+            <Label x:Name="lblURLWindowsEmulator" Visibility="Collapsed">https://www.winehq.org/</Label>
+            <TextBox x:Name="txtPrice" Visibility="Collapsed" Text="Price: FREE!" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- Ubuntu Operating System-->
+
+            <Label></Label>
+            <!-- Pixel Battery-->
+            <Label x:Name="lblGooglePixelBattery" Visibility="Collapsed" FontSize="14">Google Pixel Battery</Label>
+            <CheckBox x:Name="chkGooglePixelBattery" Visibility="Collapsed" Content="Google Pixel 1 Battery" Checked="ChkGooglePixelBattery_Checked" Unchecked="ChkGooglePixelBattery_Unchecked"/>
+            <Label x:Name="lblURLGooglePixelBattery" Visibility="Collapsed">Amazon.ca - Google pixel battery</Label>
+            <TextBox x:Name="txtPixelBatteryPrice" Visibility="Collapsed" Text="Price: $22.99" Background="Yellow" FontSize="14" Width="576" Height="32"/>
+            <!-- Pixel Battery-->   
+
+
+
+
+
+
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
